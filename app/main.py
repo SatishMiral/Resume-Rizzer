@@ -1,10 +1,9 @@
-# app/main.py
 from fastapi import FastAPI
 from app.core.config import settings
 from app.api.routers import auth
+from app.api.routers import resume
 from app.db.database import engine
 from app.db import models
-from app.api.routers import resume
 
 app = FastAPI(title=settings.PROJECT_NAME)
 
