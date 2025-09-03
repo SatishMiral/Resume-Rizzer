@@ -1,0 +1,48 @@
+{
+  "Summary": "Node.js Developer with strong experience in building and optimizing backend systems, APIs, and database-driven applications. Proficient in Node.js, Express.js, and PostgreSQL with a solid understanding of front-end technologies including React.js and React Native. Skilled at designing and maintaining scalable server-side logic, integrating APIs, and ensuring high performance and responsiveness. Adept at collaborating with cross-functional teams and deploying solutions on AWS using microservices and serverless architectures.",
+  
+  "Skills": [
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "REST API Development",
+    "JavaScript",
+    "React.js",
+    "React Native",
+    "AWS",
+    "Serverless Architecture",
+    "Database Design",
+    "Git",
+    "Agile Development"
+  ],
+
+  "Experience": [
+    "RSquareSoft Technologies – Software Engineer Intern (Jan 2025 – Present)",
+    "Developed and optimized backend APIs using Node.js and Express.js, ensuring high performance and seamless integration with front-end components.",
+    "Collaborated with the front-end team to integrate React Native features, improving responsiveness and data flow between client and server.",
+    "Worked with PostgreSQL to manage structured data, implement efficient queries, and ensure database reliability.",
+    "Applied Git for version control and contributed to agile development processes, adapting to evolving requirements."
+  ],
+
+  "Projects": [
+    "SmartCompare – ML Powered Chrome Extension (Node.js, Express.js, Puppeteer, TensorFlow.js, AWS)",
+    "Built a Node.js and Express.js backend for real-time e-commerce product comparison, enabling seamless data exchange between Amazon and Flipkart.",
+    "Integrated Puppeteer for live scraping and AWS for scalable deployment, ensuring accuracy and performance.",
+    "Designed and implemented server-side logic to handle multiple requests simultaneously with high responsiveness.",
+
+    "BookMania – Web Application (Node.js, Express.js, PostgreSQL, EJS, REST APIs)",
+    "Developed a server-side backend in Node.js and Express.js for managing user book collections with CRUD functionality.",
+    "Integrated Google Books API and implemented RESTful API endpoints, ensuring smooth data flow between client and server.",
+    "Optimized PostgreSQL queries for performance and data integrity."
+  ],
+
+  "Education": [
+    "Walchand Institute Of Technology, Solapur — B.Tech in Electronics & Telecommunication (Expected Jul 2025)",
+    "CGPA: 9/10"
+  ],
+
+  "Certifications": [
+    "Web Development Bootcamp – Udemy",
+    "Data Structures & Algorithms – Apna College"
+  ]
+}
