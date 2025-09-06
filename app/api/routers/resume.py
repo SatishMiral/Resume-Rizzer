@@ -8,7 +8,7 @@ from app.schemas import auth
 from app.services.resume.resume import parse_resume_docx
 from app.services.resume.tailor import tailor_resume_with_jd  
 from app.services.resume.generator import generate_resume_docx, convert_to_pdf
-from app.services.resume.replacer import replace_sentences_in_docx
+from app.services.resume.replacer import replace_sentences_in_docx, replace_and_style
 
 router = APIRouter(prefix="/resume", tags=["Resume"])
 
@@ -42,6 +42,36 @@ async def parse_resume(
         resume_json = parse_resume_docx(tmp)
 
     return {"filename": file.filename, "parsed_resume": resume_json}
+
+@router.post("/replace_text/")
+async def replace_text(
+    file: UploadFile = File(...),
+    from_sentence: str = Form(...),
+    to_sentence: str = Form(...),
+    bold_words: str = Form(""),   # comma-separated
+    italic_words: str = Form("")  # comma-separated
+):
+    # Save uploaded file temporarily
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as tmp_in:
+        tmp_in.write(await file.read())
+        tmp_in.flush()
+        input_path = tmp_in.name
+
+    # Load document
+    doc = Document(input_path)
+
+    # Convert comma-separated lists into Python lists
+    bold_list = [w.strip() for w in bold_words.split(",") if w.strip()]
+    italic_list = [w.strip() for w in italic_words.split(",") if w.strip()]
+
+    # Replace and style
+    replace_and_style(doc, from_sentence, to_sentence, bold_list, italic_list)
+
+    # Save updated file
+    output_path = input_path.replace(".docx", "_updated.docx")
+    doc.save(output_path)
+
+    return FileResponse(output_path, filename="updated_resume.docx")
 
 @router.post("/tailor")
 async def tailor_resume(
