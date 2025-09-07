@@ -1,32 +1,33 @@
 from docx import Document
 import re
+import nltk
 
-def split_into_sentences(text: str):
-    # Very simple sentence splitter (could be improved with nltk/spacy)
-    return [s.strip() for s in re.split(r'(?<=[.!?])\s+', text) if s.strip()]
+# Using NLTK in Production can be triky
+def extract_sentences(docx_path: str):
+    doc = Document(docx_path)
+    sentences = []
+    for para in doc.paragraphs:
+        text = para.text.strip()
+        if text:  
+            para_sentences = nltk.sent_tokenize(text)
+            sentences.extend(para_sentences)
+    return sentences
 
-def parse_resume_docx(file) -> dict:
-    """
-    Parse a DOCX resume into JSON with sections -> list of sentences.
-    """
-    doc = Document(file)
-
-    resume_json = {}
-    current_section = None
+# Simpler version to extract sentences
+def extract_sentences_regex(docx_path: str):
+    doc = Document(docx_path)
+    sentences = []
+    id_counter = 1
 
     for para in doc.paragraphs:
         text = para.text.strip()
-        if not text:
-            continue
+        if text:  # ignore empty lines
+            # Split into sentences
+            para_sentences = re.split(r'(?<=[.!?]) +', text)
+            for s in para_sentences:
+                s = s.strip()
+                if s:
+                    sentences.append({"id": id_counter, "text": s})
+                    id_counter += 1
 
-        # Detect headings (basic rule: all caps or ends with colon)
-        if text.isupper() or text.endswith(":"):
-            current_section = text.strip(":").title()
-            resume_json[current_section] = []
-            continue
-
-        if current_section:
-            sentences = split_into_sentences(text)
-            resume_json[current_section].extend(sentences)
-
-    return resume_json
+    return {"sentences": sentences}

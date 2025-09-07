@@ -1,6 +1,7 @@
 import io
 import tempfile
-from fastapi.responses import FileResponse
+import json
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Depends
 from docx import Document
 from app.core.security import get_current_user
@@ -8,49 +9,50 @@ from app.schemas import auth
 from app.services.resume.resume import parse_resume_docx
 from app.services.resume.tailor import tailor_resume_with_jd  
 from app.services.resume.generator import generate_resume_docx, convert_to_pdf
-from app.services.resume.replacer import replace_sentences_in_docx, replace_and_style
+from app.services.resume.replacer import replace_and_style
+from app.services.resume.parser import extract_sentences_regex
 
 router = APIRouter(prefix="/resume", tags=["Resume"])
 
-@router.post("/upload")
-async def upload_resume(
-    file: UploadFile = File(...),
-    current_user: auth.UserLogin = Depends(get_current_user)
-):
-    if not file.filename.endswith(".docx"):
-        raise HTTPException(status_code=400, detail="Only .docx files are supported")
-
-    contents = await file.read()
-    document = Document(io.BytesIO(contents))
-    text = "\n".join([para.text for para in document.paragraphs if para.text.strip()])
-
-    return {"filename": file.filename, "content": text}
-
-
-@router.post("/parse")
+# Extract sentences from docx
+@router.post("/extract_sentences")
 async def parse_resume(
     file: UploadFile = File(...),
-    current_user: auth.UserLogin = Depends(get_current_user)
+    #current_user: auth.UserLogin = Depends(get_current_user)
 ):
-    if not file.filename.endswith(".docx"):
-        raise HTTPException(status_code=400, detail="Only .docx files are supported")
+    """
+    Extract sentences from the uploaded `.docx` resume.
+    """
+    # Step 1: Save the uploaded file temporarily
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as tmp_in:
+        tmp_in.write(await file.read())
+        tmp_in.flush()
+        input_path = tmp_in.name
 
-    # Save uploaded content in memory
-    contents = await file.read()
-    with io.BytesIO(contents) as tmp:
-        # Use parser to generate JSON
-        resume_json = parse_resume_docx(tmp)
+    # Step 2: Extract sentences from the document
+    result = extract_sentences_regex(input_path)
 
-    return {"filename": file.filename, "parsed_resume": resume_json}
+    # Step 3: Return the structured JSON response
+    return JSONResponse(content=result)
 
-@router.post("/replace_text/")
+
+# Replace whole sentences 
+@router.post("/replace_sentences")
 async def replace_text(
     file: UploadFile = File(...),
     from_sentence: str = Form(...),
     to_sentence: str = Form(...),
     bold_words: str = Form(""),   # comma-separated
-    italic_words: str = Form("")  # comma-separated
+    italic_words: str = Form(""),  # comma-separated
+    #current_user: auth.UserLogin = Depends(get_current_user)
 ):
+    '''
+    Replace whole sentences using \n
+    `from sentence` the old sentence \n
+    `to sentence` the new sentence \n
+    `bold words` comma seperated \n
+    `italic words` comma seperated
+    '''
     # Save uploaded file temporarily
     with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as tmp_in:
         tmp_in.write(await file.read())
@@ -73,33 +75,43 @@ async def replace_text(
 
     return FileResponse(output_path, filename="updated_resume.docx")
 
-@router.post("/tailor")
-async def tailor_resume(
-    resume: UploadFile = File(...),
-    job_description: str = Form(...),
-    current_user: auth.UserLogin = Depends(get_current_user)
+
+# Tailor Resume
+@router.post("/tailor_resume")
+async def apply_changes(
+    file: UploadFile = File(...),
+    changes_json: str = Form(...),
+    #current_user: auth.UserLogin = Depends(get_current_user)
 ):
-    if not resume.filename.endswith(".docx"):
-        raise HTTPException(status_code=400, detail="Only .docx files are supported")
-
-    # Save uploaded resume temporarily
-    contents = await resume.read()
+    '''
+    Tailor Resume with the response recieved from LLM \n
+    Upload `.docx` \n
+    Upload `changes_json` - This is a dummy LLM response. \n
+    The sentences which needs to be changed in the Resume in JSON format
+    '''
+    # Save uploaded docx
     with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as tmp_in:
-        tmp_in.write(contents)
-        input_docx = tmp_in.name
+        tmp_in.write(await file.read())
+        tmp_in.flush()
+        input_path = tmp_in.name
 
-    # Parse resume into JSON
-    original_json = parse_resume_docx(io.BytesIO(contents))
+    doc = Document(input_path)
 
-    # Tailor resume with GPT
-    tailored_json = tailor_resume_with_jd(original_json, job_description, use_demo=True)
+    # Load JSON changes
+    changes = json.loads(changes_json)
 
-    # Replace sentences in original DOCX
-    output_docx = input_docx.replace(".docx", "_tailored.docx")
-    replace_sentences_in_docx(input_docx, original_json, tailored_json, output_docx)
+    # Apply changes
+    for change in changes.get("sentences", []):
+        replace_and_style(
+            doc,
+            from_sentence=change["from_sentence"],
+            to_sentence=change["to_sentence"],
+            bold_words=change.get("bold_words", []),
+            italic_words=change.get("italic_words", [])
+        )
 
-    return FileResponse(
-        output_docx,
-        media_type="application/docx",
-        filename="tailored_resume.docx"
-    )
+    # Save updated file
+    output_path = input_path.replace(".docx", "_updated.docx")
+    doc.save(output_path)
+
+    return FileResponse(output_path, filename="updated_resume.docx")

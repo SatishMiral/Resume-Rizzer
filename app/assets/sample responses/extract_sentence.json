@@ -1,0 +1,196 @@
+{
+  "sentences": [
+    {
+      "id": 1,
+      "text": "Satish Miral"
+    },
+    {
+      "id": 2,
+      "text": "Solapur, India"
+    },
+    {
+      "id": 3,
+      "text": "+91-78209 25809 | satishmiral01@gmail.com | www.linkedin.com/in/satish-miral-aa6413237 | GitHub"
+    },
+    {
+      "id": 4,
+      "text": "Profile Summary"
+    },
+    {
+      "id": 5,
+      "text": "Full-Stack coder with a strong focus on frontend technologies, proficient in Node.js, Express.js, and PostgreSQL, creating scalable and efficient applications."
+    },
+    {
+      "id": 6,
+      "text": "Skilled in developing responsive and user-centric front-end interfaces using React.js and React Native, with strong version control practices using Git for seamless collaboration."
+    },
+    {
+      "id": 7,
+      "text": "Engineered an innovative solution that combines machine learning, web scraping, and cloud computing to deliver real-time insights and comparisons, enhancing user decision-making experiences."
+    },
+    {
+      "id": 8,
+      "text": "Proficient in deploying applications on cloud platform like AWS, utilizing serverless architecture and microservices to optimize performance and reduce costs."
+    },
+    {
+      "id": 9,
+      "text": "Technical Skills"
+    },
+    {
+      "id": 10,
+      "text": "React.js"
+    },
+    {
+      "id": 11,
+      "text": "Node.js"
+    },
+    {
+      "id": 12,
+      "text": "Java"
+    },
+    {
+      "id": 13,
+      "text": "React Native"
+    },
+    {
+      "id": 14,
+      "text": "AWS"
+    },
+    {
+      "id": 15,
+      "text": "Cloud Computing"
+    },
+    {
+      "id": 16,
+      "text": "DSA"
+    },
+    {
+      "id": 17,
+      "text": "Python"
+    },
+    {
+      "id": 18,
+      "text": "PostgreSQL"
+    },
+    {
+      "id": 19,
+      "text": "JavaScript"
+    },
+    {
+      "id": 20,
+      "text": "ML"
+    },
+    {
+      "id": 21,
+      "text": "Git"
+    },
+    {
+      "id": 22,
+      "text": "Experience"
+    },
+    {
+      "id": 23,
+      "text": "RSquareSoft Technologies – Software Engineer Intern                                                      Start Month: January 2025"
+    },
+    {
+      "id": 24,
+      "text": "Built intuitive and responsive mobile app interfaces using React Native, improving user experience and UI consistency."
+    },
+    {
+      "id": 25,
+      "text": "Collaborated with the team using Git for version control, ensuring smooth code integration and project management."
+    },
+    {
+      "id": 26,
+      "text": "Worked on real-time features and optimized app performance, contributing to a scalable and maintainable codebase."
+    },
+    {
+      "id": 27,
+      "text": "Gained hands-on experience in mobile app development within an agile environment, adapting quickly to changing requirements."
+    },
+    {
+      "id": 28,
+      "text": "Projects"
+    },
+    {
+      "id": 29,
+      "text": "SmartCompare – ML Powered Chrome Extension | HTML, CSS, Node.js, Express.js, Puppe teer, Tensorflow.js, AWS"
+    },
+    {
+      "id": 30,
+      "text": "GitHub Repository"
+    },
+    {
+      "id": 31,
+      "text": "SmartCompare is an Innovative Chrome extension that instantly fetches and displays Amazon product details (price, rating, similarity score) for any Flipkart product, and vice versa, enabling smarter shopping decisions."
+    },
+    {
+      "id": 32,
+      "text": "Developed a Node.js and Express.js backend, integrated with Puppeteer for live data retrieval, ensuring accurate product information."
+    },
+    {
+      "id": 33,
+      "text": "Deployed the backend on AWS, used TensorFlow.js for real-time image matching."
+    },
+    {
+      "id": 34,
+      "text": "Designed a seamless, non-intrusive UI that overlays comparison data directly on product pages of Amazon & Flipkart, saving users time and effort."
+    },
+    {
+      "id": 35,
+      "text": "BookMania – Web Application | HTML, CSS, EJS, Node.js, Express.js, RESTful API, PostgreSQL"
+    },
+    {
+      "id": 36,
+      "text": "GitHub Repository"
+    },
+    {
+      "id": 37,
+      "text": "BookMania is a Web Application designed for book enthusiasts to explore, manage, and curate their personal book collections."
+    },
+    {
+      "id": 38,
+      "text": "Implemented dynamic front-end templates with EJS, streamlining user interactions and enhancing UI functionality for search, add, view, and delete features."
+    },
+    {
+      "id": 39,
+      "text": "Designed a responsive platform using Node.js, Express, and EJS, enabling users to search books via the Google Books API, view details, and manage their personal collections."
+    },
+    {
+      "id": 40,
+      "text": "Developed RESTful API integration with Axios and optimized database interactions using PostgreSQL, ensuring fast and secure data handling."
+    },
+    {
+      "id": 41,
+      "text": "Education"
+    },
+    {
+      "id": 42,
+      "text": "Walchand Institute Of Technology, Solapur\tExpected Graduation: July 2025"
+    },
+    {
+      "id": 43,
+      "text": "Bachelor of Technology"
+    },
+    {
+      "id": 44,
+      "text": "Electronics & Telecommunication"
+    },
+    {
+      "id": 45,
+      "text": "CGPA :- 9/10"
+    },
+    {
+      "id": 46,
+      "text": "Certifications"
+    },
+    {
+      "id": 47,
+      "text": "Web Development Bootcamp – Udemy  - Certificate"
+    },
+    {
+      "id": 48,
+      "text": "Data Structures & Algorithms – Apna College - Certificate"
+    }
+  ]
+}

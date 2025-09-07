@@ -1,0 +1,25 @@
+{
+  "sentences": [
+    {
+      "id": 1,
+      "from_sentence": "Full-Stack coder with a strong focus on frontend technologies, proficient in Node.js, Express.js, and PostgreSQL, creating scalable and efficient applications.",
+      "to_sentence": "Half-Stack Developer with a weak focus on frontend technologies, proficient in Node.js, Express.js, and PostgreSQL, creating scalable and efficient applications.",
+      "bold_words": ["Node.js", "Express.js", "PostgreSQL"],
+      "italic_words": ["efficient"]
+    },
+    {
+      "id": 2,
+      "from_sentence": "Skilled in developing responsive and user-centric front-end interfaces using React.js and React Native, with strong version control practices using Git for seamless collaboration.",
+      "to_sentence": "Skilled in engineering responsive and user-centric front-end interfaces using React.js and React Native, with strong version control practices using Git for seamless collaboration.",
+      "bold_words": ["React.js"],
+      "italic_words": ["Git"]
+    },
+    {
+      "id": 3,
+      "from_sentence": "Built intuitive and responsive mobile app interfaces using React Native, improving user experience and UI consistency.",
+      "to_sentence": "Built intuitive and responsive laptop app interfaces using React Native, improving UI/UX",
+      "bold_words": ["laptop", "app", "UI/UX"],
+      "italic_words": []
+    }
+  ]
+}
