@@ -1,0 +1,172 @@
+{
+  "sentences": [
+    {
+      "id": 1,
+      "text": "Vaibhav Agarwal"
+    },
+    {
+      "id": 2,
+      "text": "+91-XXXXXXXXXX | xxxxxxxxx@gmail.com | LinkedIn | Github | Leetcode | Codeforces | GeeksForGeeks"
+    },
+    {
+      "id": 3,
+      "text": "Experience"
+    },
+    {
+      "id": 4,
+      "text": "Software Developer | Digital Health Team\tJan 2024 – Present"
+    },
+    {
+      "id": 5,
+      "text": "Samsung R&D Institute, Noida"
+    },
+    {
+      "id": 6,
+      "text": "Resolved impressive over 800 bugs, resulting among the highest Bug Resolution Rate within the team."
+    },
+    {
+      "id": 7,
+      "text": "Contribution: Executed the implementation of 20+ features and tasks for watch 6 and watch 7, consistently delivering updates to the Play Store."
+    },
+    {
+      "id": 8,
+      "text": "Led the development of flagship features from scratch in the Exercise, Daily Activity, Step trackers and introducing key features like Custom Workout, Race, Routine, thus improving user engagement by 30 percent."
+    },
+    {
+      "id": 9,
+      "text": "Reduced app start up time by 2s (3s to 1s), resulting in around 15 percent increase in daily active users"
+    },
+    {
+      "id": 10,
+      "text": "(DAU) and enhanced user experience."
+    },
+    {
+      "id": 11,
+      "text": "Integrated cloud-based services using Samsung Cloud for push notifications, real-time data synchronization, and analytics to enhance user engagement across platforms."
+    },
+    {
+      "id": 12,
+      "text": "Software Developer Intern | SE Linux Team\tJan 2023 – Dec 2023"
+    },
+    {
+      "id": 13,
+      "text": "Samsung R&D Institute, Noida"
+    },
+    {
+      "id": 14,
+      "text": "Developed internal automation tools with Node.js and ReactJS, reducing manual processing time by 40% while achieving high accuracy in permission analysis."
+    },
+    {
+      "id": 15,
+      "text": "Optimized data storage using MySQL and use algorithms for rapid retrieval and analysis of SE Linux files."
+    },
+    {
+      "id": 16,
+      "text": "Enhanced backend performance through efficient data querying and streamlined user input processing using"
+    },
+    {
+      "id": 17,
+      "text": "JavaScript-based services."
+    },
+    {
+      "id": 18,
+      "text": "Technical Skills"
+    },
+    {
+      "id": 19,
+      "text": "Programming Languages: Kotlin, JavaScript, C/C++, HTML/CSS"
+    },
+    {
+      "id": 20,
+      "text": "Mobile Development: Android SDK, MVVM, Room, LiveData, Coroutines, Retrofit Backend Development: Node.js, Express.js, REST APIs, MongoDB, MySQL Developer Tools: Android Studio, VS Code, Git, Postman"
+    },
+    {
+      "id": 21,
+      "text": "Concepts: Data Structures, Algorithms, OOPS, Multithreading, Clean Architecture"
+    },
+    {
+      "id": 22,
+      "text": "Education"
+    },
+    {
+      "id": 23,
+      "text": "YMCA University of Science and Technology\tAug 2019 – July 2023"
+    },
+    {
+      "id": 24,
+      "text": "B.Tech in Electronics & Computer Engineering, 8.7 CGPA"
+    },
+    {
+      "id": 25,
+      "text": "DAV Public School, Faridabad\tApril 2018 – April 2019"
+    },
+    {
+      "id": 26,
+      "text": "CBSE Class XII, 93.2% Aggregate"
+    },
+    {
+      "id": 27,
+      "text": "Projects"
+    },
+    {
+      "id": 28,
+      "text": "Jobster Application | ReactJS, NodeJS, MongoDB"
+    },
+    {
+      "id": 29,
+      "text": "Developed a full-stack job application platform featuring dynamic job tracking, user authentication, and"
+    },
+    {
+      "id": 30,
+      "text": "role-based authorization."
+    },
+    {
+      "id": 31,
+      "text": "Utilized React for the front-end and Node.js, Express.js, and MongoDB for the backend, ensuring efficient"
+    },
+    {
+      "id": 32,
+      "text": "RESTful API communications."
+    },
+    {
+      "id": 33,
+      "text": "E-Commerce API | JavaScript, Node.js, MongoDB"
+    },
+    {
+      "id": 34,
+      "text": "Developed a comprehensive API suite to support various modules including product management, user authentication, review systems, and order processing."
+    },
+    {
+      "id": 35,
+      "text": "Implemented secure login functionality and robust authorization mechanisms to protect sensitive user data."
+    },
+    {
+      "id": 36,
+      "text": "Achievements"
+    },
+    {
+      "id": 37,
+      "text": "Qualified and participated in ACM ICPC Regionals"
+    },
+    {
+      "id": 38,
+      "text": "Top 1% on LeetCode with a maximum rating of 2178"
+    },
+    {
+      "id": 39,
+      "text": "Successfully cleared the Samsung Professional certification exam"
+    },
+    {
+      "id": 40,
+      "text": "5 Star rating on Codechef with a maximum rating of 2045"
+    },
+    {
+      "id": 41,
+      "text": "Achieved Expert rating on Codeforces with a maximum rating of 1640"
+    },
+    {
+      "id": 42,
+      "text": "Secured 1st Rank in Codeathon 2022, winning a cash prize of 30K"
+    }
+  ]
+}

@@ -1,46 +1,39 @@
 {
   "sentences": [
     {
-      "id": 5,
-      "from_sentence": "Full-Stack coder with a strong focus on frontend technologies, proficient in Node.js, Express.js, and PostgreSQL, creating scalable and efficient applications.",
-      "to_sentence": "Full Stack Developer with expertise in building robust and scalable web and mobile applications, experienced in both frontend and backend systems.",
-      "bold_words": ["Full Stack Developer"],
-      "italic_words": ["scalable"]
-    },
-    {
       "id": 6,
-      "from_sentence": "Skilled in developing responsive and user-centric front-end interfaces using React.js and React Native, with strong version control practices using Git for seamless collaboration.",
-      "to_sentence": "Proficient in Node.js, Express.js, and PostgreSQL, with strong experience in frontend frameworks including React.js and Next.js, and familiarity with Angular and Vue.js.",
-      "bold_words": ["Node.js", "Express.js", "PostgreSQL", "React.js", "Next.js", "Angular", "Vue.js"],
-      "italic_words": []
+      "from_sentence": "Resolved impressive over 800 bugs, resulting among the highest Bug Resolution Rate within the team.",
+      "to_sentence": "Resolved over 800 software issues by troubleshooting and debugging applications, ensuring adherence to coding standards and improving overall software quality.",
+      "bold_words": ["troubleshooting", "debugging", "coding", "standards"],
+      "italic_words": ["software", "quality"]
     },
     {
       "id": 7,
-      "from_sentence": "Engineered an innovative solution that combines machine learning, web scraping, and cloud computing to deliver real-time insights and comparisons, enhancing user decision-making experiences.",
-      "to_sentence": "Skilled at designing and maintaining scalable server-side logic, integrating RESTful APIs and third-party services, while ensuring performance, quality, and responsiveness.",
-      "bold_words": ["RESTful APIs"],
-      "italic_words": ["scalable", "performance", "quality", "responsiveness"]
+      "from_sentence": "Contribution: Executed the implementation of 20+ features and tasks for watch 6 and watch 7, consistently delivering updates to the Play Store.",
+      "to_sentence": "Designed and implemented software solutions by contributing to 20+ features, ensuring customer requirements were met and delivering high-quality updates.",
+      "bold_words": ["Designed", "implemented", "customer", "requirements"],
+      "italic_words": ["high-quality"]
     },
     {
       "id": 8,
-      "from_sentence": "Proficient in deploying applications on cloud platform like AWS, utilizing serverless architecture and microservices to optimize performance and reduce costs.",
-      "to_sentence": "Experienced in deploying applications on cloud platforms, integrating SQL and NoSQL databases such as MongoDB, and writing Python scripts for backend automation.",
-      "bold_words": ["MongoDB", "Python"],
-      "italic_words": ["backend automation"]
+      "from_sentence": "Led the development of flagship features from scratch in the Exercise, Daily Activity, Step trackers and introducing key features like Custom Workout, Race, Routine, thus improving user engagement by 30 percent.",
+      "to_sentence": "Collaborated with cross-functional teams to lead the development of key features, driving innovation and improving user engagement by 30%.",
+      "bold_words": ["cross-functional", "teams", "innovation"],
+      "italic_words": ["user", "engagement"]
     },
     {
-      "id": 25,
-      "from_sentence": "Collaborated with the team using Git for version control, ensuring smooth code integration and project management.",
-      "to_sentence": "Collaborated with cross-functional teams using Git and version control best practices, ensuring smooth code integration and delivery of high-quality products.",
-      "bold_words": ["Git"],
-      "italic_words": ["cross-functional", "high-quality"]
+      "id": 14,
+      "from_sentence": "Developed internal automation tools with Node.js and ReactJS, reducing manual processing time by 40% while achieving high accuracy in permission analysis.",
+      "to_sentence": "Developed and maintained software applications with Node.js and ReactJS, streamlining processes and improving efficiency across teams.",
+      "bold_words": ["Developed", "maintained", "efficiency"],
+      "italic_words": ["software", "applications"]
     },
     {
-      "id": 26,
-      "from_sentence": "Worked on real-time features and optimized app performance, contributing to a scalable and maintainable codebase.",
-      "to_sentence": "Debugged and troubleshot issues across web and mobile applications, contributing to scalable, maintainable, and high-performance codebases.",
-      "bold_words": [],
-      "italic_words": ["scalable", "maintainable", "high-performance"]
+      "id": 15,
+      "from_sentence": "Optimized data storage using MySQL and use algorithms for rapid retrieval and analysis of SE Linux files.",
+      "to_sentence": "Worked with SQL databases such as MySQL to optimize data storage and retrieval, applying problem-solving and analytical skills to complex engineering challenges.",
+      "bold_words": ["SQL", "databases", "MySQL", "problem-solving", "analytical", "skills"],
+      "italic_words": ["engineering", "challenges"]
     }
   ]
 }

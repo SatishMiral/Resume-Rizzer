@@ -6,9 +6,6 @@ from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Depends
 from docx import Document
 from app.core.security import get_current_user
 from app.schemas import auth
-from app.services.resume.resume import parse_resume_docx
-from app.services.resume.tailor import tailor_resume_with_jd  
-from app.services.resume.generator import generate_resume_docx, convert_to_pdf
 from app.services.resume.replacer import replace_and_style
 from app.services.resume.parser import extract_sentences_regex
 
