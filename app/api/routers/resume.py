@@ -15,7 +15,7 @@ router = APIRouter(prefix="/resume", tags=["Resume"])
 @router.post("/extract_sentences")
 async def parse_resume(
     file: UploadFile = File(...),
-    #current_user: auth.UserLogin = Depends(get_current_user)
+    current_user: auth.UserLogin = Depends(get_current_user)
 ):
     """
     Extract sentences from the uploaded `.docx` resume.
@@ -41,7 +41,7 @@ async def replace_text(
     to_sentence: str = Form(...),
     bold_words: str = Form(""),   # comma-separated
     italic_words: str = Form(""),  # comma-separated
-    #current_user: auth.UserLogin = Depends(get_current_user)
+    current_user: auth.UserLogin = Depends(get_current_user)
 ):
     '''
     Replace whole sentences using \n
@@ -78,7 +78,7 @@ async def replace_text(
 async def apply_changes(
     file: UploadFile = File(...),
     changes_json: str = Form(...),
-    #current_user: auth.UserLogin = Depends(get_current_user)
+    current_user: auth.UserLogin = Depends(get_current_user)
 ):
     '''
     Tailor Resume with the response recieved from LLM \n
